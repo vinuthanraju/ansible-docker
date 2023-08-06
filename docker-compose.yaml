@@ -1,0 +1,19 @@
+version: "3"
+
+# First create Ansible Master container
+services:
+  ansible:
+    image: ansible
+    container_name: ansible-master
+    restart: unless-stopped
+
+# Create working nodes
+  node1:
+    image: ubuntu
+    container_name: node01
+    restart: unless-stopped
+
+  node2:
+    image: ubuntu
+    container_name: node02
+    restart: unless-stopped

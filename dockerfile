@@ -1,5 +1,6 @@
 # Use the latest Ubuntu LTS as the base image
 FROM ubuntu
+CMD ["sleep", "infinity"]
 
 #Install dependencies and Ansible
 RUN apt-get update \
